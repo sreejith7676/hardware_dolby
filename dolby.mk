@@ -52,9 +52,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DolbyFrameworksResCommon
 
-# Permissions
-PRODUCT_COPY_FILES += \
-    $(DOLBY_PATH)/configs/permissions/privapp-permissions-dolby.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-dolby.xml
 
 # Spatial Audio
 PRODUCT_COPY_FILES += \
