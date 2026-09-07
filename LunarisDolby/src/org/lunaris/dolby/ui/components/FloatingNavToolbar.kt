@@ -60,10 +60,10 @@ fun FloatingNavToolbar(
                     bottom = FloatingToolbarDefaults.ScreenOffset
                 )
                 .shadow(
-                    elevation = 16.dp,
+                    elevation = 12.dp,
                     shape = MaterialTheme.shapes.extraLarge,
-                    ambientColor = Color.Black.copy(alpha = 0.4f),
-                    spotColor = Color.Black.copy(alpha = 0.5f)
+                    ambientColor = MaterialTheme.colorScheme.scrim,
+                    spotColor = MaterialTheme.colorScheme.scrim
                 )
         ) {
             NavToolbarItem(
@@ -76,7 +76,7 @@ fun FloatingNavToolbar(
                 onContainerColor = onContainerColor,
                 onClick = {
                     scope.launch {
-                        haptic.performHaptic(HapticFeedbackHelper.HapticIntensity.DOUBLE_CLICK)
+                        haptic.performHaptic(HapticFeedbackHelper.HapticIntensity.CLICK)
                     }
                     onNavigate("settings")
                 }
@@ -93,7 +93,7 @@ fun FloatingNavToolbar(
                 onContainerColor = onContainerColor,
                 onClick = {
                     scope.launch {
-                        haptic.performHaptic(HapticFeedbackHelper.HapticIntensity.DOUBLE_CLICK)
+                        haptic.performHaptic(HapticFeedbackHelper.HapticIntensity.CLICK)
                     }
                     onNavigate("equalizer")
                 }
@@ -109,7 +109,7 @@ fun FloatingNavToolbar(
                 onContainerColor = onContainerColor,
                 onClick = {
                     scope.launch {
-                        haptic.performHaptic(HapticFeedbackHelper.HapticIntensity.DOUBLE_CLICK)
+                        haptic.performHaptic(HapticFeedbackHelper.HapticIntensity.CLICK)
                     }
                     onNavigate("advanced")
                 }
